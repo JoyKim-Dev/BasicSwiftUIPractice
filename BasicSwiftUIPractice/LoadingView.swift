@@ -9,8 +9,7 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        NavigationView {
-            VStack {
+               VStack {
                 Text("HELLO, \nMY POLAROID")
                     .font(.system(size: 35, weight: .black, design: .serif)) // FontDesign 설정
                     .fontWeight(.black)
@@ -29,10 +28,7 @@ struct LoadingView: View {
                         .background(Color.blue)
                         .cornerRadius(25)
                 }
-                .padding(.top, 100)
-                
-                
-            }
+                .padding()
         }
     }
 }
