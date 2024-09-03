@@ -9,10 +9,11 @@ import SwiftUI
 
 
 struct CoinNetworkView: View {
-
+    
     @State private var searchedData: [Market] = []
     @State private var searchWord:String = ""
     @State private var market: [Market] = []
+    @State private var favoriteCoins: Set<String> = []
     
     var filteredData: [Market] {
         guard !searchWord.isEmpty else { return market }
@@ -23,24 +24,34 @@ struct CoinNetworkView: View {
     }
     
     var body: some View {
+        
         NavigationView {
             ScrollView {
                 listView(filteredData)
                 
             }
-        
-                .refreshable {
-                    await callRequest()
-                }
-                .navigationTitle("Search")
-            .searchable(text: $searchWord, prompt: "Search")
+            .refreshable {
+                await callRequest()
             }
-        
+            .navigationTitle("Search")
+            .searchable(text: $searchWord, prompt: "Search")
+        }
         .task {
             await callRequest()
         }
         
+        
+        
     }
+    
+    func toggleFavorite(for item: Market) {
+        if favoriteCoins.contains(item.market) {
+            favoriteCoins.remove(item.market)
+        } else {
+            favoriteCoins.insert(item.market)
+        }
+    }
+    
     func callRequest() async {
         do {
             let result = try await UpbitAPI.fetchAllMarket()
@@ -50,25 +61,31 @@ struct CoinNetworkView: View {
         }
     }
     func rowView(_ item: Market) -> some View {
-        HStack {
-            Circle()
-                .frame(height: 40)
-                .overlay(alignment: .center) {
-                    Image(systemName: "heart")
-                        .foregroundStyle(.white)
+        NavigationLink(destination: LoadingCompleteView(dataFromPreviousView: item.englishName)) {
+            HStack {
+                Circle()
+                    .frame(height: 40)
+                    .overlay(alignment: .center) {
+                        Image(systemName: "heart")
+                            .foregroundStyle(.white)
+                    }
+                    .clipShape(Circle())
+                    .padding()
+                
+                VStack(alignment: .leading) {
+                    Text(item.englishName)
+                        .font(.callout)
+                    Text(item.market)
+                        .font(.caption)
                 }
-                .clipShape(Circle())
-                .padding()
-            
-            VStack(alignment: .leading) {
-                Text(item.englishName)
-                    .font(.callout)
-                Text(item.market)
-                    .font(.caption)
+                Spacer()
+                Image(systemName: favoriteCoins.contains(item.market) ? "star.fill" : "star")
+                    .foregroundColor(favoriteCoins.contains(item.market) ? .black: .gray)
+                    .padding()
+                    .onTapGesture {
+                        toggleFavorite(for: item)
+                    }
             }
-            Spacer()
-            Image(systemName: "star")
-                .padding()
         }
     }
     func listView(_ data : [Market]) -> some View {

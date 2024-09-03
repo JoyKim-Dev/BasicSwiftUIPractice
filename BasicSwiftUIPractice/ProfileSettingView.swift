@@ -111,7 +111,7 @@ struct ProfileSettingView: View {
             .disabled(!isStartButtonEnabled )
             .padding(.top, 100)
             .sheet(isPresented: $isSheetPresented) {
-                LoadingCompleteView()
+                LoadingCompleteView(dataFromPreviousView: "")
             }
             
         }

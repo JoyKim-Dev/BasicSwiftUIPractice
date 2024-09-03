@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct LoadingCompleteView: View {
+    
+     var dataFromPreviousView: String
+    
     var body: some View {
-        Text("가입되었습니다.")
+        Text(dataFromPreviousView)
             .font(.title2)
             .bold()
     }
 }
 
-#Preview {
-    LoadingCompleteView()
-}
+
