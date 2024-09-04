@@ -12,12 +12,13 @@
 		3553833B2C76C60D002863FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3553833A2C76C60D002863FD /* Assets.xcassets */; };
 		3553833E2C76C60D002863FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3553833D2C76C60D002863FD /* Preview Assets.xcassets */; };
 		35821BFC2C86FB510064F63A /* CoinNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35821BFB2C86FB510064F63A /* CoinNetworkView.swift */; };
-		35821BFE2C86FDB60064F63A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35821BFD2C86FDB60064F63A /* SearchBar.swift */; };
 		35821C002C8700470064F63A /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35821BFF2C8700470064F63A /* UpbitAPI.swift */; };
 		35E787472C85A9C700063A47 /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E787462C85A9C700063A47 /* ProfileSettingView.swift */; };
 		35E787492C85A9E000063A47 /* ProfileImageSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E787482C85A9E000063A47 /* ProfileImageSettingView.swift */; };
 		35E7874B2C85A9F900063A47 /* LoadingCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7874A2C85A9F900063A47 /* LoadingCompleteView.swift */; };
 		35E7874D2C85AB3000063A47 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7874C2C85AB3000063A47 /* LoadingView.swift */; };
+		35E7AE6F2C889E1E00C4C63D /* CoinVIewNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7AE6E2C889E1E00C4C63D /* CoinVIewNavigation.swift */; };
+		35E7AE712C88A0E000C4C63D /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7AE702C88A0E000C4C63D /* Banner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,12 +28,13 @@
 		3553833A2C76C60D002863FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3553833D2C76C60D002863FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35821BFB2C86FB510064F63A /* CoinNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNetworkView.swift; sourceTree = "<group>"; };
-		35821BFD2C86FDB60064F63A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		35821BFF2C8700470064F63A /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
 		35E787462C85A9C700063A47 /* ProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingView.swift; sourceTree = "<group>"; };
 		35E787482C85A9E000063A47 /* ProfileImageSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSettingView.swift; sourceTree = "<group>"; };
 		35E7874A2C85A9F900063A47 /* LoadingCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCompleteView.swift; sourceTree = "<group>"; };
 		35E7874C2C85AB3000063A47 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		35E7AE6E2C889E1E00C4C63D /* CoinVIewNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinVIewNavigation.swift; sourceTree = "<group>"; };
+		35E7AE702C88A0E000C4C63D /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,9 @@
 				355383362C76C60D002863FD /* BasicSwiftUIPracticeApp.swift */,
 				3553833C2C76C60D002863FD /* Preview Content */,
 				35821BFB2C86FB510064F63A /* CoinNetworkView.swift */,
-				35821BFD2C86FDB60064F63A /* SearchBar.swift */,
 				35821BFF2C8700470064F63A /* UpbitAPI.swift */,
+				35E7AE6E2C889E1E00C4C63D /* CoinVIewNavigation.swift */,
+				35E7AE702C88A0E000C4C63D /* Banner.swift */,
 			);
 			path = BasicSwiftUIPractice;
 			sourceTree = "<group>";
@@ -164,7 +167,8 @@
 				35E7874B2C85A9F900063A47 /* LoadingCompleteView.swift in Sources */,
 				355383392C76C60D002863FD /* ContentView.swift in Sources */,
 				35821BFC2C86FB510064F63A /* CoinNetworkView.swift in Sources */,
-				35821BFE2C86FDB60064F63A /* SearchBar.swift in Sources */,
+				35E7AE6F2C889E1E00C4C63D /* CoinVIewNavigation.swift in Sources */,
+				35E7AE712C88A0E000C4C63D /* Banner.swift in Sources */,
 				355383372C76C60D002863FD /* BasicSwiftUIPracticeApp.swift in Sources */,
 				35E7874D2C85AB3000063A47 /* LoadingView.swift in Sources */,
 			);
