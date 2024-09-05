@@ -18,7 +18,7 @@ struct LoadingView: View {
                 Image("launchImage")
                 
                 NavigationLink {
-                    ProfileSettingView()
+                    CoinVIewNavigation()
                 } label: {
                     Text("시작하기")
                         .font(.headline)
